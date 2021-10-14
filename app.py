@@ -6,17 +6,12 @@ from telegram.ext import callbackcontext
 from requests import Request, Session
 import json
 import time
-import re
+import os
+PORT = int(os.environ.get('PORT', 5000))
 
 def getInfo (coin,a): # Function to get the info
 
     url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest' # Coinmarketcap API url
-
-    # parameters1 = { 'slug': 'bitcoin', 'convert': 'USD' } # API parameters to pass in for retrieving specific cryptocurrency data
-    # parameters2 = { 'slug': 'ethereum', 'convert': 'USD' }
-    #parameters3 = { 'slug': 'solana', 'convert': 'USD' }
-    # parameters4 = { 'slug': 'cardano', 'convert': 'USD' }
-
     parameters = { 'slug': 'coinname', 'convert': 'USD' }
     parameters['slug'] = coin
     headers = {
@@ -86,4 +81,7 @@ updater.dispatcher.add_handler(CommandHandler('ETHprice', ethprice))
 updater.dispatcher.add_handler(CommandHandler('SOLprice', solprice))
 updater.dispatcher.add_handler(CommandHandler('ADAprice', adaprice))
 updater.dispatcher.add_handler(CommandHandler('DOGEprice', dogeprice))
-updater.start_polling()
+updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path="2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
+updater.bot.setWebhook('https://yourherokuappname.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
