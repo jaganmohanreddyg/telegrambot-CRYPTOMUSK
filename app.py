@@ -83,10 +83,10 @@ def main():
     updater.start_polling()
     updater.start_webhook(listen="0.0.0.0",
                             port=int(PORT),
-                            url_path="2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
-                            # webhook_url='https://telegram-bot-cryptomusk.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14"
+                            url_path="2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14",
+                            webhook_url='https://telegram-bot-cryptomusk.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
                             
-    updater.bot.setWebhook('https://telegram-bot-cryptomusk.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
+    #updater.bot.setWebhook('https://telegram-bot-cryptomusk.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
     updater.idle()
 if __name__ == '__main__':
     main()
