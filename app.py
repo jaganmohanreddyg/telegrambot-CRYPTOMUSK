@@ -84,7 +84,7 @@ def main():
     updater.start_webhook(listen="0.0.0.0",
                             port=int(PORT),
                             url_path="2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14",
-                            webhook_url='https://telegram-bot-cryptomusk.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
+                            webhook_url='https://webhook.site/60ea7387-b761-4a35-acc7-3f9aea055533")
                             
     #updater.bot.setWebhook('https://telegram-bot-cryptomusk.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
     #updater.idle()
