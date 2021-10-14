@@ -87,6 +87,6 @@ def main():
                             webhook_url='https://telegram-bot-cryptomusk.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
                             
     #updater.bot.setWebhook('https://telegram-bot-cryptomusk.herokuapp.com/' + "2041688226:AAG1-i1t0Sd2-ylOR6YKU93KsgT8fqXln14")
-    updater.idle()
+    #updater.idle()
 if __name__ == '__main__':
     main()
